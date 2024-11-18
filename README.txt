@@ -48,7 +48,7 @@ If no movies match the selected filters, a message will inform you that no movie
     			* Navigates to IMDb's search page for specific genres.
     			* Scrapes the movie title, release year, and rating for each movie.
     			* Continues to scrape additional pages by clicking the "50 more" button to load more movies.
-    			* Appends each movie’s data (title, genre, release year, rating) to a list and then saves the data in a CSV file called 				movies.csv.
+    			* Appends each movie’s data (title, genre, release year, rating) to a list and then saves the data in a CSV file called	movies.csv.
 
 
 	-- Loading and Cleaning Data
@@ -85,7 +85,7 @@ If no movies match the selected filters, a message will inform you that no movie
 
 4) Troubleshooting
 
-    	*Missing WebDriver: If you encounter errors related to missing the Chrome WebDriver, ensure you have Google Chrome installed and that the 		webdriver-manager library is correctly set up to manage the WebDriver.
+    	*Missing WebDriver: If you encounter errors related to missing the Chrome WebDriver, ensure you have Google Chrome installed and that the webdriver-manager library is correctly set up to manage the WebDriver.
 
-    	* Missing Data: If the application fails to scrape data from IMDb or doesn't find any movies, it might be because IMDb has changed its structure 	or the script can't load the page properly. You might need to inspect the page and adjust the scraping code accordingly.
+    	* Missing Data: If the application fails to scrape data from IMDb or doesn't find any movies, it might be because IMDb has changed its structure or the script can't load the page properly. You might need to inspect the page and adjust the scraping code accordingly.
 
