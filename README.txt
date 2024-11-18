@@ -3,7 +3,18 @@ Movie/TV Show Suggestion App
 This Python application allows users to receive movie or TV show suggestions based on a specific genre and/or minimum rating. The app scrapes IMDb for movie data, stores it in a CSV file, and provides suggestions through a simple graphical user interface (GUI) built using Tkinter.
 
 
-Features -
+1) Files added - 
+
+	* movie_picker.py : Main program file
+	* movies.csv : csv file created after scraping from IMDB website. You can create your own by running the scrape function in movie_picker.py file
+	* README.txt : This file explains the project and related files
+	* Part 1 - App opens.png : Screenshot of how the app opens
+	* Part 2 - Part 2 - Choose genre & Min Rating : Screenshot for choosing the filters by user
+	* part 3 - Get Random movie suggestion : Screenshot for a random movie suggestion
+	* Part 4 - Also get top 15 movies by rating : Screenshot for top 15 movies by rating suggestion
+
+
+2) Project Features -
 
     * Scrapes IMDb for movies from multiple genres (e.g., Action, Comedy, Drama, Thriller).
     * Stores scraped data in a CSV file for future use.
@@ -13,7 +24,7 @@ Features -
 
 
 
-1) Requirements - 
+3) Requirements - 
 
 To run the application, you need the following Python libraries installed:
 
@@ -28,7 +39,7 @@ Additionally, ensure that you have Google Chrome installed, as the application u
 
 
 
-2) How to Use - 
+4) How to Use - 
 
 Once the script is running, a GUI window will pop up with the following inputs:
 
@@ -39,7 +50,7 @@ Once the script is running, a GUI window will pop up with the following inputs:
 If no movies match the selected filters, a message will inform you that no movies were found.
 
 
-3) Code Explanation
+5) Code Explanation
 
 	-- Scraping IMDb
 
@@ -83,7 +94,7 @@ If no movies match the selected filters, a message will inform you that no movie
     			* Displays a button that, when clicked, shows the random movie suggestion and the list of top 15 movies.
 
 
-4) Troubleshooting
+6) Troubleshooting
 
     	*Missing WebDriver: If you encounter errors related to missing the Chrome WebDriver, ensure you have Google Chrome installed and that the webdriver-manager library is correctly set up to manage the WebDriver.
 
