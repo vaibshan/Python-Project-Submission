@@ -5,9 +5,9 @@ This Python application allows users to receive movie or TV show suggestions bas
 The app scrapes IMDb for movie data, stores it in a CSV file, and provides suggestions through a simple graphical user interface (GUI) built using Tkinter.
 
 
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Attached Files
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 	1) movie_picker_v1	- Contains the main code for the app
 	2) movies_1.csv 	- A dataset created by scraping from IMDB using the app
@@ -18,9 +18,9 @@ The app scrapes IMDb for movie data, stores it in a CSV file, and provides sugge
 	7) Readme.txt		- A text file containing all the information about the app
 
 
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Features
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
     * Scrapes IMDb for movies from multiple genres (e.g., Action, Comedy, Drama, Thriller).
     * Stores scraped data in a CSV file for future use.
@@ -29,9 +29,9 @@ The app scrapes IMDb for movie data, stores it in a CSV file, and provides sugge
     * GUI-based interface using Tkinter to interact with users.
 
 
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Requirements
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 To run the application, you need the following Python libraries installed:
 
@@ -45,9 +45,9 @@ To run the application, you need the following Python libraries installed:
 Additionally, ensure that you have Google Chrome installed, as the application uses the Chrome WebDriver.
 
 
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # How to Use
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 	-- Scraping IMDb:
 
@@ -71,9 +71,9 @@ Additionally, ensure that you have Google Chrome installed, as the application u
 		* If no movies match the selected filters, a message will inform you that no movies were found.
 
 	
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Code Explanation
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
 	-- Scraping IMDb
 
@@ -118,9 +118,9 @@ Additionally, ensure that you have Google Chrome installed, as the application u
     		* Displays a button that, when clicked, shows the random movie suggestion and the list of top 15 movies.
 
 
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 # Troubleshooting
-# --------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------
 
     	* Missing WebDriver: If you encounter errors related to missing the Chrome WebDriver, ensure you have Google Chrome installed and that the 		webdriver-manager library is correctly set up to manage the WebDriver.
 
