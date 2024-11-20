@@ -49,73 +49,73 @@ Additionally, ensure that you have Google Chrome installed, as the application u
 # How to Use
 # ---------------------------------------------------------------------------------------------------------------
 
-	-- Scraping IMDb:
+-- Scraping IMDb:
 
-    	* When the script is first run, the application will automatically scrape IMDb for movie data based on the genres provided.
-    	* The scraping will be done in the background, and a progress bar will appear in the GUI.
-    	* Once scraping is completed, the data is saved into a CSV file called movies_1.csv for future use. You do not need to re-scrape unless you want fresh data.
-
-
-	-- After Scraping Completes:
-
-    	* Once the scraping is finished, the genre and rating input fields will be displayed to allow the user to filter the suggestions.
-    	* Users can choose the genre, set a minimum rating, and then click "Suggest Movie/TV Show" to get a random movie suggestion and the top 15 movies based on their criteria.
+    * When the script is first run, the application will automatically scrape IMDb for movie data based on the genres provided.
+    * The scraping will be done in the background, and a progress bar will appear in the GUI.
+    * Once scraping is completed, the data is saved into a CSV file called movies_1.csv for future use. You do not need to re-scrape unless you want fresh data.
 
 
-	-- Running the App:
+-- After Scraping Completes:
 
-    	* Once the script is running, a GUI window will pop up with the following inputs:
-        * Choose Genre: You can select a genre from the dropdown list (Action, Comedy, Drama, Thriller, or "All").
-        * Minimum Rating: You can enter a minimum rating (numeric value) for the movie suggestions.
-        * Click "Suggest Movie/TV Show": The application will suggest a random movie and display the top 15 movies that match the selected genre and rating.
-		* If no movies match the selected filters, a message will inform you that no movies were found.
+    * Once the scraping is finished, the genre and rating input fields will be displayed to allow the user to filter the suggestions.
+    * Users can choose the genre, set a minimum rating, and then click "Suggest Movie/TV Show" to get a random movie suggestion and the top 15 movies based on their criteria.
+
+
+-- Running the App:
+
+    * Once the script is running, a GUI window will pop up with the following inputs:
+    * Choose Genre: You can select a genre from the dropdown list (Action, Comedy, Drama, Thriller, or "All").
+    * Minimum Rating: You can enter a minimum rating (numeric value) for the movie suggestions.
+    * Click "Suggest Movie/TV Show": The application will suggest a random movie and display the top 15 movies that match the selected genre and rating.
+    * If no movies match the selected filters, a message will inform you that no movies were found.
 
 	
 # ---------------------------------------------------------------------------------------------------------------
 # Code Explanation
 # ---------------------------------------------------------------------------------------------------------------
 
-	-- Scraping IMDb
+-- Scraping IMDb
 
-		The script uses Selenium to scrape data from IMDb. The function scrape_imdb():
+	The script uses Selenium to scrape data from IMDb. The function scrape_imdb():
 
-    			* Navigates to IMDb's search page for specific genres.
-    			* Scrapes the movie title, release year, and rating for each movie.
-    			* Continues to scrape additional pages by clicking the "50 more" button to load more movies.
-    			* Appends each movie’s data (title, genre, release year, rating) to a list and then saves the data in a CSV file called movies_1.csv
+    	* Navigates to IMDb's search page for specific genres.
+    	* Scrapes the movie title, release year, and rating for each movie.
+    	* Continues to scrape additional pages by clicking the "50 more" button to load more movies.
+    	* Appends each movie’s data (title, genre, release year, rating) to a list and then saves the data in a CSV file called movies_1.csv
 				
 
-	-- Loading and Cleaning Data
+-- Loading and Cleaning Data
 
-		* The load_movie_data() function loads the movie data from the movies_1.csv file into a pandas DataFrame:
-		* NaN values in the columns Title and Rating are removed, as these columns are essential for filtering and displaying the movie 			suggestions.
-
-
-	-- Filtering Movies
-
-		The filter_movies() function filters the movies based on two criteria:
-
-    		* Genre: Only movies that match the selected genre will be included.
-    		* Minimum Rating: Only movies with a rating greater than or equal to the specified rating will be included.
+	* The load_movie_data() function loads the movie data from the movies_1.csv file into a pandas DataFrame:
+	* NaN values in the columns Title and Rating are removed, as these columns are essential for filtering and displaying the movie	suggestions.
 
 
-	-- Suggesting Random and Top Movies
+-- Filtering Movies
 
-		The suggest_random_and_top_movies() function:
+	The filter_movies() function filters the movies based on two criteria:
 
-    			* Filters the movie data according to the user’s specified genre and rating.
-    			* Returns one random movie suggestion from the filtered list.
-    			* Returns the top 15 movies (sorted by top IMDB ratings).
+    	* Genre: Only movies that match the selected genre will be included.
+    	* Minimum Rating: Only movies with a rating greater than or equal to the specified rating will be included.
 
 
-	-- GUI Setup
+-- Suggesting Random and Top Movies
 
-		The Tkinter GUI allows users to interact with the application.
+	The suggest_random_and_top_movies() function:
 
-			* A window showing progress of scraping opens. When the scrapig is 100% done the GUI then takes input from user.
-			* A dropdown menu for selecting the genre.
-    		* An input field for entering a minimum rating.
-    		* Displays a button that, when clicked, shows the random movie suggestion and the list of top 15 movies.
+    	* Filters the movie data according to the user’s specified genre and rating.
+    	* Returns one random movie suggestion from the filtered list.
+    	* Returns the top 15 movies (sorted by top IMDB ratings).
+
+
+-- GUI Setup
+
+	The Tkinter GUI allows users to interact with the application.
+
+	* A window showing progress of scraping opens. When the scrapig is 100% done the GUI then takes input from user.
+	* A dropdown menu for selecting the genre.
+    	* An input field for entering a minimum rating.
+    	* Displays a button that, when clicked, shows the random movie suggestion and the list of top 15 movies.
 
 
 # ---------------------------------------------------------------------------------------------------------------
