@@ -19,7 +19,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # --------------------------------------------------------------------------------------------------------------------------------
 
 options = webdriver.ChromeOptions()
-# options.add_argument("--headless")  # Tried doing scraping in headless mode but I think it doesn't support
+# options.add_argument("--headless")  # Tried doing scraping in headless mode but I think it doesn't support with scraping
 options.add_argument("--window-position=-2400,-2400")  # Move the browser window off-screen || Used this instead of headless
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)  # Initializing the Chrome driver
 
